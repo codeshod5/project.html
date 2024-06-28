@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+body{
+    background-color:rgb(98, 54, 4) ;
+    color: rgb(214, 147, 23)
+}
+header nav{
+    background-color: bisque;
+    padding: 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index:1;
+}
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+
+form inout[type ="text"]{
+    flex-grow:1;
+    margin-right:10px;
+
+}
+form button:hover{
+    background-color: aqua;
+
+}
+/* main section */
+.recipecont {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap:40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+.recpie{
+   background-color: rgb(226, 189, 141);
+   display: flex;
+   flex-direction: column;
+   max-width: 350px;
+
+}
+.recpie h5{
+    font-size: 20px;
+    font-weight: 700;
+    color: brown;
+    text-decoration: underline;
+}
+.recpie button{
+    font-size:20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(225, 159, 52);
+    color: rgb(208, 127, 14);
+}
+.recpie button:hover{
+    background-color: rgb(235, 177, 83);
+    color: brown;
+}
+.recipe-deatails{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+
+  background-color: blanchedalmond;
+  border-radius: 12px;
+  width:40%;
+  height:60%;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+  overflow-y: scroll;
+}
+/* adding scroll bar to recipe deatails */
+.recipe-deatails::webkit-scrollbar{
+    width:10px;
+}
+.recipe-deatails::webkit-scrollbar-thumb{
+    background: grey;
+    border-radius: 16px;
+    --webkit-border-radius:16px;
+}
+.recipe-deatails-content{
+    padding: 30px;
+}
+
+
+/*rsopnsive design*/
+@media screen and(max-width:600px){
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }
+
+}
+
